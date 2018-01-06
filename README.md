@@ -25,6 +25,15 @@ This library collects various image processing algorithms and provides a simple 
 
 #### Edge detection image
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/canny.png?raw=true)
+ 
+#### Bloom image
+![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/bloom.png?raw=true)
+
+#### Sharpen image
+![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/sharpen.png?raw=true)
+
+#### Lookup table image
+![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/lut.png?raw=true)
 
 # Special thanks
-Special thanks goes to [avatarr](https://github.com/avatarr/java-image-processing-algorithm) for implementing and publishing basic algorithms. Also thank you very much Tom Gibara for your great blog post and the implementation of the [canny edge detector](http://www.tomgibara.com/computer-vision/canny-edge-detector).
+My special thanks goes to [avatarr](https://github.com/avatarr/java-image-processing-algorithm) for implementing and publishing basic algorithms. Also thank you very much Tom Gibara for your great blog post and the implementation of the [canny edge detector](http://www.tomgibara.com/computer-vision/canny-edge-detector).
