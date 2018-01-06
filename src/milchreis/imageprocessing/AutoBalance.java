@@ -46,7 +46,7 @@ public class AutoBalance {
         for (int i = 0; i < _image.width; i++) {
             for (int j = 0; j < _image.height; j++) {
             	
-                int p = RGB.getRGBW(_image, i, j);
+                int p = _image.get(i, j);
                 r = (p >> 16) & 0xff;
                 g = (p >> 8) & 0xff;
                 b = (p & 0xff);

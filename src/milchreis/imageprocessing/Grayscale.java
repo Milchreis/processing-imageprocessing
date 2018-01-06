@@ -19,7 +19,7 @@ public class Grayscale {
         for (int i = 0; i < _image.width; i++) {
             for (int j = 0; j < _image.height; j++) {
                 int rgb;
-                int p = RGB.getRGBW(_image, i, j);
+                int p = _image.get(i, j);
 
                 rgb = (int) ((((p >> 16) & 0xFF) * 0.2125) + (((p >> 8) & 0xFF) * 0.7154) + ((p & 0xFF) * 0.0721));
                 rgb = (rgb << 16) | (rgb << 8) | (rgb);

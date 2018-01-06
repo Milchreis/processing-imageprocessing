@@ -22,7 +22,7 @@ public class Threshold {
 			for (int j = 0; j < _image.height; j++) {
 				
 				// Get pixels
-				r = RGB.getRGBW(_image, i, j);
+				r = _image.get(i, j);
 				r = ((r >> 16) & 0xff);
 				
 				if (r > threshold) {
@@ -32,7 +32,6 @@ public class Threshold {
 				}
 				p = (p << 16) | (p << 8) | (p);
 				imageOutput.set(i, j, p);
-				
 			}
 		}
 		

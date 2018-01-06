@@ -21,7 +21,7 @@ public class Erosion {
         for (int i = -_r; i < _r; i++) {
             for (int j = -_r; j < _r; j++) {
                 if (i * i + j * j < radiusPow) {
-                    int c = RGB.getRGBW(_image, _w + i, _h + j);
+                    int c = _image.get(_w + i, _h + j);
                     minR = Math.min(minR, (c >> 16) & 0xFF);
                     minG = Math.min(minG, (c >> 8) & 0xFF);
                     minB = Math.min(minB, c & 0xFF);
