@@ -9,62 +9,71 @@ _Photo is taken by me [more here](https://www.instagram.com/milchreisjunkie/)_
 
 #### Grayscale image
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/gray.png?raw=true)
-```
+```java
 PImage processedImage = Grayscale.apply(image);
 ```
 
 #### Threshold image
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/threshold.png?raw=true)
-```
+```java
 PImage processedImage = Threshold.apply(image);  // Auto threshold
 PImage processedImage = Threshold.apply(image, value);  // Threshold value between 0 and 255
 ```
 
 #### Dilation image
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/dilation.png?raw=true)
-```
-PImage processedImage =  Dilation.apply(image, radius);  // radius is a positive number
+```java
+PImage processedImage = Dilation.apply(image, radius);  // radius is a positive number
 ```
 
 #### Erosion image
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/erosion.png?raw=true)
-```
-PImage processedImage =  Erosion.apply(image, radius);  // radius is a positive number
+```java
+PImage processedImage = Erosion.apply(image, radius);  // radius is a positive number
 ```
 
 #### AutoBalance image
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/autobalance.png?raw=true)
+```java
+PImage processedImage = AutoBalance.apply(image);
 ```
-PImage processedImage =  AutoBalance.apply(image);
+
+#### Pixelize image
+![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/pixelation.png?raw=true)
+```java
+// pixelsize is a positive number
+PImage processedImage = Pixelation.apply(image, pixelsize); 
+// Pixelize a sub area of the input image
+PImage processedImage = Pixelation.apply(image, pixelsize, subX, subY, subWidth, subHeight);  
 ```
 
 #### Gaussian blur image
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/gaussian.png?raw=true)
-```
+```java
 PImage processedImage = Gaussian.apply(image, 7, 0.84089642);   // kernel size and sigma 
 ```
 
 #### Edge detection image
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/canny.png?raw=true)
-```
+```java
 PImage processedImage = CannyEdgeDetector.apply(image);
 ```
  
 #### Bloom image
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/bloom.png?raw=true)
-```
+```java
 PImage processedImage = Bloom.apply(image, intensity);  // intensity between 0 and 255
 ```
 
 #### Sharpen image
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/sharpen.png?raw=true)
-```
+```java
 PImage processedImage = Sharpen.apply(image, sharpIntensity);  // sharpIntensity between 0.0 and 10.0
 ```
 
 #### Lookup table image
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/lut.png?raw=true)
-```
+```java
 LUT style = LUT.loadLut(LUT.STYLE.CONTRAST);
 PImage processedImage = LUT.apply(image, style); 
 ```
