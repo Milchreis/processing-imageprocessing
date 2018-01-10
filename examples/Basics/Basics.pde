@@ -1,6 +1,13 @@
+/* Example for basic image processing algorithms.
+ * Use the mouse wheel to switch the different algorithms
+ * and press the left mouse button to see the original image.
+ *  
+ * Author: Nick 'Milchreis' Müller
+ */
+ 
 import milchreis.imageprocessing.*;
 
-int numberOfAlgorithms = 7;
+int numberOfAlgorithms = 8;
 int currentAlgorithm = 0;
 
 PImage image;
@@ -52,13 +59,19 @@ void draw() {
       processedImage = AutoBalance.apply(image);
     }
     
-    // Gaussian for blurred images 
+    // Pixelation
     if(currentAlgorithm == 5) {
+      int pixelsize = (int) map(mouseX, 0, width, 0, 100);
+      processedImage = Pixelation.apply(image, pixelsize);
+    }
+    
+    // Gaussian for blurred images 
+    if(currentAlgorithm == 6) {
       processedImage = Gaussian.apply(image, 7, 0.84089642);
     }
     
     // Edge detection with Canny's algorithm
-    if(currentAlgorithm == 6) {
+    if(currentAlgorithm == 7) {
       processedImage = CannyEdgeDetector.apply(image);
     }
   }

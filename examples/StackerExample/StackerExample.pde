@@ -1,3 +1,11 @@
+/* Example for stacking images.
+ * Generates an average face by 10 example faces.
+ * Normally the median pixel is selected. 
+ * Use the mouse button to see the average mode. 
+ * 
+ * Author: Nick 'Milchreis' Müller
+ */
+
 import milchreis.imageprocessing.*;
 
 PImage image;

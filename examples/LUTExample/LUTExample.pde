@@ -1,3 +1,10 @@
+/* Example for lookup tables (LUT).
+ * Use the mouse wheel to switch the different tables/styles
+ * and press the left mouse button to see the original image.
+ *  
+ * Author: Nick 'Milchreis' Müller
+ */
+ 
 import milchreis.imageprocessing.*;
 
 PImage image;

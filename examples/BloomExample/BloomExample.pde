@@ -1,3 +1,10 @@
+/* Example for bloom effect.
+ * Move the mouse from left to right to see different intensity
+ * or press the left mouse button to see the original image.
+ *  
+ * Author: Nick 'Milchreis' Müller
+ */
+ 
 import milchreis.imageprocessing.*;
 
 PImage image;
