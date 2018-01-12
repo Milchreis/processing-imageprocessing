@@ -78,5 +78,23 @@ LUT style = LUT.loadLut(LUT.STYLE.CONTRAST);
 PImage processedImage = LUT.apply(image, style); 
 ```
 
+#### Stacked images
+![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/stacker.png?raw=true)
+```java
+// Add so many images in the end as you need
+PImage processedImage = Stacker.apply(Stacker.ALGORITHM.AVERAGE, image1, image2);
+PImage processedImage = Stacker.apply(Stacker.ALGORITHM.MEDIAN, image1, image2);
+```
+
+#### Halftone image
+![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/halftone.png?raw=true)
+```java
+PImage processedImage = Halftone.apply(image, dotsize);  // dot size in pixel
+PImage processedImage = Halftone.apply(image, dotsize, grid); // grid = true, on false honeycomb style
+PImage processedImage = Halftone.apply(image, dotsize, foreground, background);  // background and foreground colors
+PImage processedImage = Halftone.apply(image, dotsize, foreground, background, grid);
+PImage processedImage = Halftone.apply(image, dotsize, foreground, background, spacing, grid); // size between dots in pixels
+```
+
 # Special thanks
 My special thanks goes to [avatarr](https://github.com/avatarr/java-image-processing-algorithm) for implementing and publishing basic algorithms. Also thank you very much Tom Gibara for your great blog post and the implementation of the [canny edge detector](http://www.tomgibara.com/computer-vision/canny-edge-detector).
