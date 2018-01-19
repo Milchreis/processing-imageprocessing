@@ -53,10 +53,18 @@ PImage processedImage = Pixelation.apply(image, pixelsize, subX, subY, subWidth,
 
 ## Edge detection
 
-#### Edge detection image
+#### Canny's algorithm
 ![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/canny.png?raw=true)
 ```java
 PImage processedImage = CannyEdgeDetector.apply(image);
+```
+ 
+#### Sobels algorithm
+![alt text](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/sobel.png?raw=true)
+```java
+PImage processedImage = SobelEdgeDetector.apply(image);
+// for colored sobel (for each color channel)
+PImage processedImage = SobelEdgeDetector.apply(image, false);
 ```
  
 ## Optimisation
