@@ -7,7 +7,7 @@
  
 import milchreis.imageprocessing.*;
 
-int numberOfAlgorithms = 8;
+int numberOfAlgorithms = 9;
 int currentAlgorithm = 0;
 
 PImage image;
@@ -73,6 +73,12 @@ void draw() {
     // Edge detection with Canny's algorithm
     if(currentAlgorithm == 7) {
       processedImage = CannyEdgeDetector.apply(image);
+    }
+    
+    // Edge detection with Sobel's algorithm
+    if(currentAlgorithm == 8) {
+      // SobelEdgeDetector.apply(image, false) creates a colored image
+      processedImage = SobelEdgeDetector.apply(image);
     }
   }
   

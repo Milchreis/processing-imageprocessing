@@ -26,4 +26,8 @@ public class Tools {
         }
         return arr;
     }
+
+	public static PImage createBlankImageLike(PImage image) {
+		return createImage(image.width, image.height, image.format, image);
+	}
 }
