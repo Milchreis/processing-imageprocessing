@@ -38,6 +38,12 @@ PImage processedImage = Dilation.apply(image, radius);  // radius is a positive 
 PImage processedImage = Erosion.apply(image, radius);  // radius is a positive number
 ```
 
+#### Quantization
+![alt grayscale](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/quantization.png?raw=true)
+```java
+PImage processedImage = Quantization.apply(image, shades);  // shades is a positive number between 1 and 255
+```
+
 ## Blur
 
 #### Gaussian blur image
