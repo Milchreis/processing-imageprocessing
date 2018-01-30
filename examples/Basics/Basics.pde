@@ -7,7 +7,7 @@
  
 import milchreis.imageprocessing.*;
 
-int numberOfAlgorithms = 9;
+int numberOfAlgorithms = 10;
 int currentAlgorithm = 0;
 
 PImage image;
@@ -80,6 +80,12 @@ void draw() {
       // SobelEdgeDetector.apply(image, false) creates a colored image
       processedImage = SobelEdgeDetector.apply(image);
     }
+    
+    // Quantize the colors
+    if(currentAlgorithm == 9) {
+      int quant = (int) map(mouseX, 0, width, 1, 10);
+      processedImage = Quantization.apply(image, quant);
+    }
   }
   
   // show image
@@ -87,9 +93,12 @@ void draw() {
 }
 
 void mouseWheel(MouseEvent event) {
-  currentAlgorithm += 1;
+  currentAlgorithm += event.getCount();
   
   if(currentAlgorithm >= numberOfAlgorithms) {
     currentAlgorithm = 0;
+  }
+  if(currentAlgorithm < 0) {
+    currentAlgorithm = numberOfAlgorithms-1;
   }
 }

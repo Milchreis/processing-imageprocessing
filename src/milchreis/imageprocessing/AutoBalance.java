@@ -43,22 +43,21 @@ public class AutoBalance {
         PImage output = Tools.createImage(_image.width, _image.height, PConstants.RGB, _image);
         int r, g, b;
         
+        output.loadPixels();
         for (int i = 0; i < _image.width; i++) {
             for (int j = 0; j < _image.height; j++) {
             	
-                int p = _image.get(i, j);
-                r = (p >> 16) & 0xff;
-                g = (p >> 8) & 0xff;
-                b = (p & 0xff);
+            	int[] rgb = Tools.getColors(_image, i, j);
 
-                r = new_Histogram[r];
-                g = new_Histogram[g];
-                b = new_Histogram[b];
+                r = new_Histogram[rgb[0]];
+                g = new_Histogram[rgb[1]];
+                b = new_Histogram[rgb[2]];
 
                 output.set(i, j, (r << 16) | (g << 8) | (b));
             }
         }
 
+        output.updatePixels();
         return output;
 
     }
