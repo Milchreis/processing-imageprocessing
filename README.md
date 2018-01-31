@@ -97,6 +97,17 @@ PImage processedImage = Bloom.apply(image, intensity);  // intensity between 0 a
 PImage processedImage = Sharpen.apply(image, sharpIntensity);  // sharpIntensity between 0.0 and 10.0
 ```
 
+#### Color shift image
+![alt sharpen](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/colorshift.png?raw=true)
+```java
+// hue is a value between 0 and 360
+// offset is the color range which is accepted (in hue range)
+// shift is the number of the subtracted or added hue value
+PImage processedImage = ColorShift.applyHue(image, hue, offset, shift);  // or short: ColorShift.apply(image, hue, offset, shift)
+PImage processedImage = ColorShift.applySaturation(image, hue, offset, shift);
+PImage processedImage = ColorShift.applyBrightness(image, hue, offset, shift);
+```
+
 ## Looks
 
 #### Lookup table image
