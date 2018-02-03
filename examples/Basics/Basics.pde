@@ -7,7 +7,7 @@
  
 import milchreis.imageprocessing.*;
 
-int numberOfAlgorithms = 10;
+int numberOfAlgorithms = 11;
 int currentAlgorithm = 0;
 
 PImage image;
@@ -54,35 +54,41 @@ void draw() {
       processedImage = Erosion.apply(processedImage, (int) map(mouseX, 0, width, 1, 10));
     }
     
-    // AutoBalance for simple color correction
+    // Brightness correction
     if(currentAlgorithm == 4) {
+      int intensity = (int) map(mouseX, 0, width, -255, 255);
+      processedImage = Brightness.apply(image, intensity);
+    }
+    
+    // AutoBalance for simple color correction
+    if(currentAlgorithm == 5) {
       processedImage = AutoBalance.apply(image);
     }
     
     // Pixelation
-    if(currentAlgorithm == 5) {
+    if(currentAlgorithm == 6) {
       int pixelsize = (int) map(mouseX, 0, width, 0, 100);
       processedImage = Pixelation.apply(image, pixelsize);
     }
     
     // Gaussian for blurred images 
-    if(currentAlgorithm == 6) {
+    if(currentAlgorithm == 7) {
       processedImage = Gaussian.apply(image, 7, 0.84089642);
     }
     
     // Edge detection with Canny's algorithm
-    if(currentAlgorithm == 7) {
+    if(currentAlgorithm == 8) {
       processedImage = CannyEdgeDetector.apply(image);
     }
     
     // Edge detection with Sobel's algorithm
-    if(currentAlgorithm == 8) {
+    if(currentAlgorithm == 9) {
       // SobelEdgeDetector.apply(image, false) creates a colored image
       processedImage = SobelEdgeDetector.apply(image);
     }
     
     // Quantize the colors
-    if(currentAlgorithm == 9) {
+    if(currentAlgorithm == 10) {
       int quant = (int) map(mouseX, 0, width, 1, 10);
       processedImage = Quantization.apply(image, quant);
     }

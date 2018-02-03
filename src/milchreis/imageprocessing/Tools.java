@@ -1,6 +1,8 @@
 package milchreis.imageprocessing;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
 
 import processing.core.PApplet;
 import processing.core.PImage;
@@ -33,6 +35,18 @@ public class Tools {
 		return image;
 	}
 
+	public static List<Integer> getNeighbors(PImage image, int x, int y) {
+		
+		List<Integer> neighbors = new ArrayList<Integer>();
+		
+		for(int i=-1; i<=1; i++) {
+			for(int j=-1; j<=1; j++) {
+				neighbors.add(image.get(x+i, y+j));
+			}
+		}
+		return neighbors;
+	}
+	
 	public static PImage createImage(int w, int h, int format, PImage original) {
 		PImage image = createImage(w, h, format);
 		image.parent = original.parent; // make save() work
@@ -64,6 +78,10 @@ public class Tools {
 		return new int[]{r, g ,b};
 	}
 
+	public static int getRGB(int red, int green, int blue) {
+		 return (red << 16) | (green << 8) | (blue);
+	}
+	
 	/**
 	 * Returns an array for hue, saturation and brightness
 	 * in range:
@@ -111,4 +129,32 @@ public class Tools {
 	public static boolean in(float x, float start, float end) {
 		return x >= start && x <= end;
 	}
+	
+	public static void copyChannel(PImage source, PImage target, int sourceX, int sourceY, int w, int h, int targetX, int targetY, int sourceChannel, int destChannel) {
+		
+		for(int y = 0; y < h; y++) {
+			for(int x = 0; x < w; x++) {
+		
+				int[] rgb = Tools.getColors(source, x, y);
+				int channel = 0;
+				
+				switch(sourceChannel) {
+					case 1: channel = rgb[0]; break;
+					case 2: channel = rgb[1]; break;
+					case 3: channel = rgb[2]; break;
+				}
+
+				int[] rgbT = Tools.getColors(target, x, y);
+				
+				switch(destChannel) {
+					case 1: rgbT[0] = channel; break;
+					case 2: rgbT[1] = channel; break;
+					case 3: rgbT[2] = channel; break;
+				}
+				
+				target.set(x, y, getRGB(rgbT[0], rgbT[1], rgbT[2]));
+			}
+		}
+	}
+	
 }
