@@ -79,6 +79,13 @@ PImage processedImage = SobelEdgeDetector.apply(image, false);
  
 ## Optimisation
  
+#### Brightness
+![alt autobalance](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/brightness.png?raw=true)
+```java
+PImage processedImage = Brightness.apply(image, value); 
+// value isa positive number for brighting up or a negative for darken down
+```
+ 
 #### AutoBalance image
 ![alt autobalance](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/autobalance.png?raw=true)
 ```java
@@ -115,6 +122,12 @@ PImage processedImage = ColorShift.applyBrightness(image, hue, offset, shift);
 ```java
 LUT style = LUT.loadLut(LUT.STYLE.CONTRAST);
 PImage processedImage = LUT.apply(image, style); 
+```
+
+#### Glitch image
+![alt lookup-table](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/glitch.png?raw=true)
+```java
+PImage processedImage = Glitch.apply(image, intensity, scanlineheight);
 ```
 
 #### Dithering
