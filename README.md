@@ -61,6 +61,13 @@ PImage processedImage = Pixelation.apply(image, pixelsize);
 PImage processedImage = Pixelation.apply(image, pixelsize, subX, subY, subWidth, subHeight);  
 ```
 
+#### Tilt-Shift-Effect
+![alt tilt-shift](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/tiltshift.png?raw=true)
+```java
+PImage processedImage = TiltShift.apply(image, blurIntensity, horizontal, position, sharpWideness);   
+```
+
+
 ## Edge detection
 
 #### Canny's algorithm
