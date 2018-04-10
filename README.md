@@ -38,6 +38,13 @@ PImage processedImage = Dilation.apply(image, radius);  // radius is a positive 
 PImage processedImage = Erosion.apply(image, radius);  // radius is a positive number
 ```
 
+#### Flip image
+![alt flip](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/flip.png?raw=true)
+```java
+PImage processedImage = Flip.apply(image, horizontal, vertical);  // horizontal and vertical is a boolean
+```
+
+
 #### Quantization
 ![alt grayscale](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/quantization.png?raw=true)
 ```java
