@@ -2,6 +2,7 @@ package milchreis.imageprocessing;
 
 import java.util.Arrays;
 
+import milchreis.imageprocessing.utils.Tools;
 import processing.core.PConstants;
 import processing.core.PImage;
 

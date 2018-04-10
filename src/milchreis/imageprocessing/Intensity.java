@@ -2,6 +2,11 @@ package milchreis.imageprocessing;
 
 import processing.core.PImage;
 
+/**
+ * Under constructions:
+ * Does not work as expected.
+ *
+ */
 public class Intensity {
 
 	public static PImage apply(PImage image, float intensity) {

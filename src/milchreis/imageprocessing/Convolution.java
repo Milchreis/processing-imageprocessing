@@ -1,5 +1,6 @@
 package milchreis.imageprocessing;
 
+import milchreis.imageprocessing.utils.Tools;
 import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PImage;
