@@ -19,6 +19,19 @@ _Photo is taken by me [more here](https://www.instagram.com/milchreisjunkie/)_
 PImage processedImage = Grayscale.apply(image);
 ```
 
+#### Flip image
+![alt flip](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/flip.png?raw=true)
+```java
+PImage processedImage = Flip.apply(image, horizontal, vertical);  // horizontal and vertical are boolean
+```
+
+#### Invert colors
+![alt invert colors](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/invertcolors.png?raw=true)
+```java
+// invertRed, invertGreem and invertBlue are boolean
+PImage processedImage = InvertColors.apply(image, invertRed, invertGreen, invertBlue);  
+```
+
 #### Threshold image
 ![alt threshold](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/threshold.png?raw=true)
 ```java
@@ -36,12 +49,6 @@ PImage processedImage = Dilation.apply(image, radius);  // radius is a positive 
 ![alt erosion](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/erosion.png?raw=true)
 ```java
 PImage processedImage = Erosion.apply(image, radius);  // radius is a positive number
-```
-
-#### Flip image
-![alt flip](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/flip.png?raw=true)
-```java
-PImage processedImage = Flip.apply(image, horizontal, vertical);  // horizontal and vertical is a boolean
 ```
 
 
