@@ -28,7 +28,7 @@ PImage processedImage = Flip.apply(image, horizontal, vertical);  // horizontal 
 #### Invert colors
 ![alt invert colors](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/invertcolors.png?raw=true)
 ```java
-// invertRed, invertGreem and invertBlue are boolean
+// invertRed, invertGreen and invertBlue are boolean
 PImage processedImage = InvertColors.apply(image, invertRed, invertGreen, invertBlue);  
 ```
 
