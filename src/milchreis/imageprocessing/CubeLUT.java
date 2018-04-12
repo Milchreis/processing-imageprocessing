@@ -6,7 +6,6 @@ import java.nio.file.Files;
 import java.util.List;
 
 import milchreis.imageprocessing.utils.Tools;
-import processing.core.PApplet;
 import processing.core.PImage;
 
 public class CubeLUT {
@@ -79,9 +78,9 @@ public class CubeLUT {
 		
 				int[] rgb = Tools.getColors(src, x, y);
 				
-				float ri = rgb[0] / 256.0f;
-				float gi = rgb[1] / 256.0f;
-				float bi = rgb[2] / 256.0f;
+				float ri = rgb[0] / 255.0f;
+				float gi = rgb[1] / 255.0f;
+				float bi = rgb[2] / 255.0f;
 	
 				// map to domain
 				ri = (ri - lut.domainMin[0]) / (lut.domainMax[0] - lut.domainMin[0]);
@@ -106,45 +105,18 @@ public class CubeLUT {
 //			      
 //				} else {
 				
-					
-				
-					int ro = (int) (interpolate3d(lut, bi, gi, ri) * 256.0);
-					int go = (int) (interpolate3d(lut, bi, gi, ri) * 256.0);
-					int bo = (int) (interpolate3d(lut, bi, gi, ri) * 256.0);
-					
-					PApplet.println(" -> " + ri + ", " + gi + ", " + bi);
-					Tools.set(out, x, y, ro, go, bo);
+//					int ro = (int) (Interpolation.triLerp(bi, gi, ri, ) * 255.0);
+//					int go = (int) (interpolate3d(lut, bi, gi, ri) * 255.0);
+//					int bo = (int) (interpolate3d(lut, bi, gi, ri) * 255.0);
+//					
+//					PApplet.println(" -> " + ri + ", " + gi + ", " + bi);
+//					Tools.set(out, x, y, ro, go, bo);
 //				}
 			
 			}
 		}
 		
 	    return out;
-	}
-	
-	private static double interpolate3d(Cube cube, float x, float y, float z) {
-		int ix = (int)Math.floor(x);
-		double fx = x - ix;
-		boolean s0 = 0 <= ix   && ix   < cube.size;
-		boolean s1 = 0 <= ix+1 && ix+1 < cube.size;
-		int iy = (int)Math.floor(y);
-		double fy = y - iy;
-		boolean t0 = 0 <= iy   && iy   < cube.size;
-		boolean t1 = 0 <= iy+1 && iy+1 < cube.size;
-		int iz = (int)Math.floor(z);
-		double fz = z - iz;
-		boolean u0 = 0 <= iz   && iz   < cube.size;
-		boolean u1 = 0 <= iz+1 && iz+1 < cube.size;
-		double w000 = s0&&t0&&u0 ? cube.get(ix,iy,iz)       : 0.0;
-		double w010 = s0&&t1&&u0 ? cube.get(ix,iy+1,iz)     : 0.0;
-		double w100 = s1&&t0&&u0 ? cube.get(ix+1,iy,iz)     : 0.0;
-		double w110 = s1&&t1&&u0 ? cube.get(ix+1,iy+1,iz)   : 0.0;
-		double w001 = s0&&t0&&u1 ? cube.get(ix,iy,iz+1)     : 0.0;
-		double w011 = s0&&t1&&u1 ? cube.get(ix,iy+1,iz+1)   : 0.0;
-		double w101 = s1&&t0&&u1 ? cube.get(ix+1,iy,iz+1)   : 0.0;
-		double w111 = s1&&t1&&u1 ? cube.get(ix+1,iy+1,iz+1) : 0.0;
-		
-		return (1.0-fz) * ((1.0-fy) * ((1.0-fx)*w000 + fx*w100) + fy * ((1.0-fx)*w010 + fx*w110)) + fz * ((1.0-fy) * ((1.0-fx)*w001 + fx*w101) + fy * ((1.0-fx)*w011 + fx*w111));
 	}
 	
 		

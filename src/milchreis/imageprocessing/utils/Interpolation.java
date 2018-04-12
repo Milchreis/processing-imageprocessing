@@ -13,7 +13,7 @@ public class Interpolation {
 
 		return lerp(y, y1, y2, r1, r2);
 	}
-
+	
 	public static float triLerp(float x, float y, float z, float q000, float q001, float q010, float q011, float q100,
 			float q101, float q110, float q111, float x1, float x2, float y1, float y2, float z1, float z2) {
 		
@@ -26,4 +26,9 @@ public class Interpolation {
 
 		return lerp(z, z1, z2, r0, r1);
 	}
+	
+	public static float triLerp(float x, float y, float z, float x1, float y1, float z1, float x2, float y2, float z2) {
+		return triLerp(x, y, z, 1, 1, 1, 1, 1, 1, 1, 1, x1, x2, y1, y2, z1, z2);
+	}
+	
 }

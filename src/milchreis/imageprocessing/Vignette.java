@@ -1,5 +1,6 @@
 package milchreis.imageprocessing;
 
+import processing.core.PApplet;
 import processing.core.PConstants;
 import processing.core.PGraphics;
 import processing.core.PImage;
@@ -13,6 +14,16 @@ public class Vignette {
 	
 	public static PImage apply(PImage image) {
 		return apply(image, getMask(image, (int) (image.width * 0.5), 30, 0), 0.8f);
+	}
+	
+	public static PImage apply(PImage image, float intensity, float width) {
+		width = PApplet.map(width, 0.0f, 1.0f, 0.3f, 1.5f);
+		int vignetteW = (int) (image.width * width);
+		return apply(image, getMask(image, vignetteW, 30, 0), intensity);
+	}
+	
+	public static PImage apply(PImage image, float intensity) {
+		return apply(image, getMask(image, (int) (image.width * 0.5), 30, 0), intensity);
 	}
 
 	public static PImage getMask(PImage image, int radius, int blurStrange, int color) {
@@ -37,7 +48,7 @@ public class Vignette {
 		
 		output.beginDraw();
 		output.image(image, 0, 0);
-		output.tint(255, intensity);
+		output.tint(255, PApplet.map(intensity, 0.0f, 1.0f, 0, 255));
 		output.image(copy, 0, 0);
 		output.endDraw();
 		
