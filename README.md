@@ -51,6 +51,12 @@ PImage processedImage = Dilation.apply(image, radius);  // radius is a positive 
 PImage processedImage = Erosion.apply(image, radius);  // radius is a positive number
 ```
 
+#### Vignette image
+![alt vignette](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/vignette.png?raw=true)
+```java
+// intensity and vignetteWidth are floats between 0.0 and 1.0
+PImage processedImage = Vignette.apply(image, intensity, vignetteWidth); 
+```
 
 #### Quantization
 ![alt grayscale](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/quantization.png?raw=true)
