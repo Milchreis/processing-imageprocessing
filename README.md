@@ -112,7 +112,21 @@ PImage processedImage = SobelEdgeDetector.apply(image, false);
 PImage processedImage = Brightness.apply(image, value); 
 // value isa positive number for brighting up or a negative for darken down
 ```
- 
+
+#### Changing highlights
+![alt vignette](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/lights.png?raw=true)
+```java
+// intensity between -1.0 and 1.0
+PImage processedImage = Lights.apply(image, intensity); 
+```
+
+#### Changing shadows
+![alt vignette](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/shadows.png?raw=true)
+```java
+// intensity between -1.0 and 1.0
+PImage processedImage = Shadows.apply(image, intensity); 
+```
+
 #### AutoBalance image
 ![alt autobalance](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/autobalance.png?raw=true)
 ```java
