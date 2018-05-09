@@ -202,6 +202,13 @@ PImage processedImage = Stacker.apply(Stacker.ALGORITHM.AVERAGE, image1, image2)
 PImage processedImage = Stacker.apply(Stacker.ALGORITHM.MEDIAN, image1, image2);
 ```
 
+#### Blending two images
+![alt blending](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/blend.png?raw=true)
+```java
+// intensity is a float between 0.0 and 1.0
+PImage processedImage = Blend.apply(image1, image2, intensity);
+```
+
 
 # Special thanks
 My special thanks goes to [avatarr](https://github.com/avatarr/java-image-processing-algorithm) for implementing and publishing basic algorithms. Also thank you very much Tom Gibara for your great blog post and the implementation of the [canny edge detector](http://www.tomgibara.com/computer-vision/canny-edge-detector).
