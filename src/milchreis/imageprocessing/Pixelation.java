@@ -46,8 +46,8 @@ public class Pixelation {
 				
 				int pixel = image.get(x, y);
 				
-				for (int yp = y; (yp < y + pixelsize) && (yp < pwidth); yp++) {
-					for (int xp = x; (xp < x + pixelsize) && (xp < pheight); xp++) {
+				for (int yp = y; (yp < y + pixelsize) && (yp < pheight); yp++) {
+					for (int xp = x; (xp < x + pixelsize) && (xp < pwidth); xp++) {
 						output.set(xp, yp, pixel);
 					}
 				}
