@@ -190,7 +190,28 @@ PImage processedImage = Halftone.apply(image, dotsize, grid); // grid = true, on
 PImage processedImage = Halftone.apply(image, dotsize, foreground, background);  // background and foreground colors
 PImage processedImage = Halftone.apply(image, dotsize, foreground, background, grid);
 PImage processedImage = Halftone.apply(image, dotsize, foreground, background, spacing, grid); // size between dots in pixels
+
+
+ PImage asciiImage = ASCII.apply(image, ASCII.SHORT_SET, fontSize, foregroundColor, backgroundColor, toneInColor);
+     
+  	image(asciiImage, 0, 0);
+  	
+  	// You can also use:
+  	// ASCII.apply(PImage input);
+  	// ASCII.apply(PImage input, String characterset); 
+  	// ASCII.apply(PImage input, String characterset, int fontSize); 
 ```
+
+#### ASCII image
+![alt ascii](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/ASCII.png?raw=true)
+```java
+PImage processedImage = ASCII.apply(image);
+// characterset = ASCII.SHORT_SET or ASCII.LONG_SET, another String from black to white
+PImage processedImage = ASCII.apply(image, characterset); 
+PImage processedImage = ASCII.apply(image, characterset, fontSize); // fontSize is an integer
+PImage processedImage = ASCII.apply(image, characterset, fontSize, foregroundColor, backgroundColor, toneInColor);
+```
+
 
 ## Miscellaneous
 
