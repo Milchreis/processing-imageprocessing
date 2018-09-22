@@ -190,16 +190,6 @@ PImage processedImage = Halftone.apply(image, dotsize, grid); // grid = true, on
 PImage processedImage = Halftone.apply(image, dotsize, foreground, background);  // background and foreground colors
 PImage processedImage = Halftone.apply(image, dotsize, foreground, background, grid);
 PImage processedImage = Halftone.apply(image, dotsize, foreground, background, spacing, grid); // size between dots in pixels
-
-
- PImage asciiImage = ASCII.apply(image, ASCII.SHORT_SET, fontSize, foregroundColor, backgroundColor, toneInColor);
-     
-  	image(asciiImage, 0, 0);
-  	
-  	// You can also use:
-  	// ASCII.apply(PImage input);
-  	// ASCII.apply(PImage input, String characterset); 
-  	// ASCII.apply(PImage input, String characterset, int fontSize); 
 ```
 
 #### ASCII image
