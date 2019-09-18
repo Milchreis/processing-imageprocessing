@@ -1,6 +1,10 @@
 # Image processing for Processing
 This library collects various image processing algorithms and provides a simple access to them. All algorithms are implemented in Java and runs without any other dependencies. If you need high power performance better use [opencv for processing](https://github.com/atduskgreg/opencv-processing).
 
+If you like this project and you want to keep me awake 🤪
+
+<a href="https://www.buymeacoffee.com/milchreis" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
 # Installation
 If you want to use this library in your processing sketch you can download it via the intergrated `Contribution Manager`. 
 ![alt install](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/install.png?raw=true)
