@@ -15,6 +15,15 @@ If you want to use this library in your processing sketch you can download it vi
 
 _Photo is taken by me [more here](https://www.instagram.com/milchreisjunkie/)_
 
+## Overview
+ - [Basics](#basics)
+ - [Blur](#blur)
+ - [Edge detection](#edge-detection)
+ - [Optimisation](#optimisation)
+ - [Looks](#looks)
+ - [Miscellaneous](#miscellaneous)
+
+
 ## Basics
 
 #### Grayscale image
@@ -66,6 +75,15 @@ PImage processedImage = Vignette.apply(image, intensity, vignetteWidth);
 ![alt grayscale](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/quantization.png?raw=true)
 ```java
 PImage processedImage = Quantization.apply(image, shades);  // shades is a positive number between 1 and 255
+```
+
+#### Difference
+![alt blending](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/difference.png?raw=true)
+```java
+// difference is a float between 0.0 and 1.0 from less to very different
+float difference = Comparison.howDifferent(image1, image2);
+// differenceImage is the difference between the pixel values (black is no difference, white is high difference)
+PImage differenceImage = Comparison.calculateDifferenceImage(image1, image2);
 ```
 
 ## Blur
@@ -223,16 +241,6 @@ PImage processedImage = Stacker.apply(Stacker.ALGORITHM.MEDIAN, image1, image2);
 // intensity is a float between 0.0 and 1.0
 PImage processedImage = Blend.apply(image1, image2, intensity);
 ```
-
-#### Difference
-![alt blending](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/difference.png?raw=true)
-```java
-// difference is a float between 0.0 and 1.0 from less to very different
-float difference = Comparison.howDifferent(image1, image2);
-// differenceImage is the difference between the pixel values (black is no difference, white is high difference)
-PImage differenceImage = Comparison.calculateDifferenceImage(image1, image2);
-```
-
 
 # Special thanks
 My special thanks goes to [avatarr](https://github.com/avatarr/java-image-processing-algorithm) for implementing and publishing basic algorithms. Also thank you very much Tom Gibara for your great blog post and the implementation of the [canny edge detector](http://www.tomgibara.com/computer-vision/canny-edge-detector).
