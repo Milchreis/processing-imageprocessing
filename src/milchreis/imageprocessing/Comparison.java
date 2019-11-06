@@ -4,7 +4,7 @@ import processing.core.PImage;
 
 import static processing.core.PApplet.constrain;
 
-public class Comparsion {
+public class Comparison {
 
     public static float howDifferent(PImage img1, PImage img2) {
 
@@ -35,9 +35,6 @@ public class Comparsion {
 
         if(img1.width != img2.width || img1.height != img2.height)
             throw new RuntimeException("Images are not in the same dimension");
-
-        img1 = Grayscale.apply(img1);
-        img2 = Grayscale.apply(img2);
 
         PImage output = Tools.createBlankImageLike(img1);
 
