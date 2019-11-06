@@ -50,7 +50,7 @@ public class Comparison {
                         constrain(Math.abs(rgb1[2] - rgb2[2]), 0, 255)
                 };
 
-                output.set(x, y, Tools.getRGB(pixel[0], pixel[1], pixel[2]));
+                output.set(x, y, Tools.getRGB(pixel));
             }
         }
 
