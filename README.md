@@ -10,10 +10,6 @@ If you want to use this library in your processing sketch you can download it vi
 ![alt install](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/install.png?raw=true)
 
 # Examples
-#### Original image
-![alt original](https://github.com/Milchreis/processing-imageprocessing/blob/master/examples/Basics/data/example.jpg?raw=true)
-
-_Photo is taken by me [more here](https://www.instagram.com/milchreisjunkie/)_
 
 ## Overview
  - [Basics](#basics)
@@ -23,6 +19,10 @@ _Photo is taken by me [more here](https://www.instagram.com/milchreisjunkie/)_
  - [Looks](#looks)
  - [Miscellaneous](#miscellaneous)
 
+#### Original image
+![alt original](https://github.com/Milchreis/processing-imageprocessing/blob/master/examples/Basics/data/example.jpg?raw=true)
+
+_Photo is taken by me [more here](https://www.instagram.com/milchreisjunkie/)_
 
 ## Basics
 
