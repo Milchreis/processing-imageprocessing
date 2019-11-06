@@ -31,8 +31,8 @@ public class ASCII {
 		  font = input.parent.createFont("Monospaced", fontsize);
 	  }
 	  
-	  int widthPadding = (int)(fontsize/3);
-	  int heightPadding = (int)(fontsize/12);
+	  int widthPadding = fontsize/3;
+	  int heightPadding = fontsize/12;
 	  
 	  PGraphics canvas = input.parent.createGraphics(input.width, input.height);
 	  
