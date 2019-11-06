@@ -214,6 +214,15 @@ PImage processedImage = Halftone.apply(image, dotsize, foreground, background, g
 PImage processedImage = Halftone.apply(image, dotsize, foreground, background, spacing, grid); // size between dots in pixels
 ```
 
+#### Toning image
+![alt halftone](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/toning.png?raw=true)
+```java
+// intensity is a value between 0.0 and 1.0 and tone is a color
+color tone = color(255, 11, 120);
+float intensity = 0.8f;
+PImage processedImage = Toning.apply(image, tone, intensity);
+```
+
 #### ASCII image
 ![alt ascii](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/ASCII.png?raw=true)
 ```java
