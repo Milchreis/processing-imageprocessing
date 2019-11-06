@@ -10,7 +10,7 @@ void setup() {
   size(550, 550);
   // Load image
   image1 = loadImage(dataPath("example.jpg"));
-  image2 = loadImage(dataPath("example.jpg"));
+  image2 = loadImage(dataPath("example2.jpg"));
 }
 
 void draw() {
@@ -24,10 +24,10 @@ void draw() {
     // Calculate a picture with different pixels
     // white is a big difference
     // black is less/no difference
-    PImage differenceImage = Comparsion.calculateDifferenceImage(image1, image2);
+    PImage differenceImage = Comparison.calculateDifferenceImage(image1, image2);
     image(differenceImage, 0, 0);
 
-    float difference = Comparsion.howDifferent(image1, image2);
+    float difference = Comparison.howDifferent(image1, image2);
     float differenceInPercent = difference * 100;
 
     text(differenceInPercent + "%", width/2, 10);
