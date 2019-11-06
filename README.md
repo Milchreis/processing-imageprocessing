@@ -224,6 +224,15 @@ PImage processedImage = Stacker.apply(Stacker.ALGORITHM.MEDIAN, image1, image2);
 PImage processedImage = Blend.apply(image1, image2, intensity);
 ```
 
+#### Difference
+![alt blending](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/difference.png?raw=true)
+```java
+// difference is a float between 0.0 and 1.0 from less to very different
+float difference = Comparison.howDifferent(image1, image2);
+// differenceImage is the difference between the pixel values (black is no difference, white is high difference)
+PImage differenceImage = Comparison.calculateDifferenceImage(image1, image2);
+```
+
 
 # Special thanks
 My special thanks goes to [avatarr](https://github.com/avatarr/java-image-processing-algorithm) for implementing and publishing basic algorithms. Also thank you very much Tom Gibara for your great blog post and the implementation of the [canny edge detector](http://www.tomgibara.com/computer-vision/canny-edge-detector).
