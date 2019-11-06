@@ -121,6 +121,10 @@ public class Tools {
 		return hsb;
 	}
 
+	public static int hsbToRgb(float[] hsb) {
+		return hsbToRgb(hsb[0], hsb[1], hsb[2]);
+	}
+
 	public static int hsbToRgb(float h, float s, float b) {
 		h = PApplet.map(h, 0f, 360f, 0, 1f);
 		return Color.HSBtoRGB(h, s, b);

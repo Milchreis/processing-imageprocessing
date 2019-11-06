@@ -223,6 +223,17 @@ float intensity = 0.8f;
 PImage processedImage = Toning.apply(image, tone, intensity);
 ```
 
+#### Split toning image
+![alt halftone](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/splittoning.png?raw=true)
+```java
+PImage processedImage = SplitToning.apply(
+      image,
+      highlightTone,        // Color for highlighs (f.e. color highlightTone = color(211, 180, 21);
+      intensityHighlights,  // intensity for the toning in highlights between 0.0 and 1.0
+      shadowTone,           // Color for the shadows (f.e. color shadowTone = color(124, 32, 201);
+      intensityShadows);    // intensity for the toning in the shadows between 0.0 and 1.0
+```
+
 #### ASCII image
 ![alt ascii](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/ASCII.png?raw=true)
 ```java
