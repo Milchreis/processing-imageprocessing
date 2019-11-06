@@ -53,7 +53,11 @@ public class Tools {
 		return image;
 	}
 
-	public int[] getArray(int arr[], int val) {
+    public static int getRGB(int[] rgb) {
+		return getRGB(rgb[0], rgb[1], rgb[2]);
+    }
+
+    public int[] getArray(int arr[], int val) {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = val;
 		}
