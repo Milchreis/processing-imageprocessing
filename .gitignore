@@ -1,0 +1,11 @@
+bin
+tmp
+distribution
+
+# IntelliJ
+*.iml
+.idea
+
+# Eclipse
+.classpath
+.project
