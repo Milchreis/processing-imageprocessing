@@ -217,7 +217,7 @@ PImage processedImage = Halftone.apply(image, dotsize, foreground, background, s
 #### Toning image
 ![alt halftone](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/toning.png?raw=true)
 ```java
-// intensity is a value between 0.0 and 1.0 and tone is a color
+// tone is a color and intensity is a value between 0.0 and 1.0
 color tone = color(255, 11, 120);
 float intensity = 0.8f;
 PImage processedImage = Toning.apply(image, tone, intensity);
