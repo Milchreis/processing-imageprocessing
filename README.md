@@ -12,6 +12,8 @@ If you want to use this library in your processing sketch you can download it vi
 # Examples
 
 ## Overview
+The following algorithms are supported in this library. Click on the link to see an example image and a code snippet.
+
  - [Basics](#basics)
    - [Grayscale](#grayscale-image)
    - [Flip](#flip-image)
