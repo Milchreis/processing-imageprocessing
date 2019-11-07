@@ -135,6 +135,13 @@ PImage processedImage = Brightness.apply(image, value);
 // value isa positive number for brighting up or a negative for darken down
 ```
 
+#### Contrast
+![alt autobalance](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/contrast.png?raw=true)
+```java
+// intensity is between -1.0 and 1.0
+PImage processedImage = Contrast.apply(image, intensity); 
+```
+
 #### Changing highlights
 ![alt vignette](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/lights.png?raw=true)
 ```java
