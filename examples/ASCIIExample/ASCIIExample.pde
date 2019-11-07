@@ -13,6 +13,11 @@ void setup() {
   size(550, 550);
   // Load image
   image = loadImage(dataPath("example.jpg"));
+
+  // Get the image as ascii text
+  PImage smallImage = image.copy();
+  smallImage.resize(80, 0);
+  println(ASCII.getAsciiText(smallImage));
 }
 
 void draw() {

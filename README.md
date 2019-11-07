@@ -249,6 +249,8 @@ PImage processedImage = ASCII.apply(image);
 PImage processedImage = ASCII.apply(image, characterset); 
 PImage processedImage = ASCII.apply(image, characterset, fontSize); // fontSize is an integer
 PImage processedImage = ASCII.apply(image, characterset, fontSize, foregroundColor, backgroundColor, toneInColor);
+// To get the ASCII image as plain string use the following method
+PImage processedImage = ASCII.getAsciiText(image); 
 ```
 
 
