@@ -237,8 +237,6 @@ PImage processedImage = Glitch.apply(image, intensity, scanlineheight);
 #### Strokes image
 ![alt lookup-table](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/strokes.png?raw=true)
 ```java
-// gridSize 
-// lineLength 
 PImage processedImage = Strokes.apply(image, gridSize, lineLength);
 PImage processedImage = Strokes.apply(image, 
     gridSize,           // is positive and the area for compound pixels 
