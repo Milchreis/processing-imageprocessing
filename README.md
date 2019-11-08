@@ -43,6 +43,7 @@ The following algorithms are supported in this library. Click on the link to see
  - [Looks](#looks)
    - [Lookup table (LUT)](#lookup-table-image)
    - [Glitch-Effect](#glitch-image)
+   - [Strokes](#strokes-image)
    - [Dithering](#dithering)
    - [Halftone](#halftone-image)
    - [Toning](#toning-image)
@@ -231,6 +232,14 @@ PImage processedImage = LUT.apply(image, style);
 ![alt lookup-table](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/glitch.png?raw=true)
 ```java
 PImage processedImage = Glitch.apply(image, intensity, scanlineheight);
+```
+
+#### Strokes image
+![alt lookup-table](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/strokes.png?raw=true)
+```java
+// gridSize is positive and the area for compound pixels
+// lineLength is positive and the length in pixels for each line
+PImage processedImage = Strokes.apply(image, gridSize, lineLength);
 ```
 
 #### Dithering
