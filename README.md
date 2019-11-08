@@ -237,9 +237,17 @@ PImage processedImage = Glitch.apply(image, intensity, scanlineheight);
 #### Strokes image
 ![alt lookup-table](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/strokes.png?raw=true)
 ```java
-// gridSize is positive and the area for compound pixels
-// lineLength is positive and the length in pixels for each line
+// gridSize 
+// lineLength 
 PImage processedImage = Strokes.apply(image, gridSize, lineLength);
+PImage processedImage = Strokes.apply(image, 
+    gridSize,           // is positive and the area for compound pixels 
+    lineLength,         // is positive and the length in pixels for each line
+    lineWeight,         // is positive and the weight of each line in pixel
+    linesPerGrid,       // the number of lines per grid
+    lineIntensity,      // alpha value for each line between 0 and 255
+    inColor,            // true for colors else black and white
+    backgroundColor);   // color for the background
 ```
 
 #### Dithering
