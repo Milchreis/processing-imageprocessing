@@ -57,7 +57,11 @@ public class Tools {
 		return image;
 	}
 
-	public int[] getArray(int arr[], int val) {
+    public static int getRGB(int[] rgb) {
+		return getRGB(rgb[0], rgb[1], rgb[2]);
+    }
+
+    public int[] getArray(int arr[], int val) {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = val;
 		}
@@ -120,7 +124,7 @@ public class Tools {
 		
 		return hsb;
 	}
-	
+
 	public static int hsbToRgb(float[] hsb) {
 		return hsbToRgb(hsb[0], hsb[1], hsb[2]);
 	}
@@ -163,6 +167,13 @@ public class Tools {
 				target.set(x, y, getRGB(rgbT[0], rgbT[1], rgbT[2]));
 			}
 		}
+	}
+
+	public static int getGrey(int color) {
+		int r = (color & 0x00FF0000) >> 16;
+		int g = (color & 0x0000FF00) >> 8;
+		int b = (color & 0x000000FF);
+		return (r + b + g) / 3;
 	}
 
 }
