@@ -34,6 +34,7 @@ The following algorithms are supported in this library. Click on the link to see
  - [Optimisation](#optimisation)
    - [Brightness](#brightness)
    - [Contrast](#contrast)
+   - [Saturation](#saturation)
    - [Changing highlights](#changing-highlights)
    - [Changing shadows](#changing-shadows)
    - [Auto balance](#autobalance-image)
@@ -106,13 +107,13 @@ PImage processedImage = Vignette.apply(image, intensity, vignetteWidth);
 ```
 
 #### Quantization
-![alt grayscale](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/quantization.png?raw=true)
+![alt quantization](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/quantization.png?raw=true)
 ```java
 PImage processedImage = Quantization.apply(image, shades);  // shades is a positive number between 1 and 255
 ```
 
 #### Difference
-![alt blending](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/difference.png?raw=true)
+![alt difference](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/difference.png?raw=true)
 ```java
 // difference is a float between 0.0 and 1.0 from less to very different
 float difference = Comparison.howDifferent(image1, image2);
@@ -143,7 +144,6 @@ PImage processedImage = Pixelation.apply(image, pixelsize, subX, subY, subWidth,
 PImage processedImage = TiltShift.apply(image, blurIntensity, horizontal, position, sharpWideness);   
 ```
 
-
 ## Edge detection
 
 #### Canny's algorithm
@@ -170,21 +170,29 @@ PImage processedImage = Brightness.apply(image, value);
 ```
 
 #### Contrast
-![alt autobalance](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/contrast.png?raw=true)
+![alt contrast](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/contrast.png?raw=true)
 ```java
 // intensity is between -1.0 and 1.0
 PImage processedImage = Contrast.apply(image, intensity); 
 ```
 
+#### Saturation
+![alt saturation](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/saturation.png?raw=true)
+```java
+// intensity is between 0.0 and 10.0
+// 0.0 to 1.0 decreases and all above increases the saturation
+PImage processedImage = Saturation.apply(image, intensity); 
+```
+
 #### Changing highlights
-![alt vignette](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/lights.png?raw=true)
+![alt changing highlights](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/lights.png?raw=true)
 ```java
 // intensity between -1.0 and 1.0
 PImage processedImage = Lights.apply(image, intensity); 
 ```
 
 #### Changing shadows
-![alt vignette](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/shadows.png?raw=true)
+![alt changing shadows](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/shadows.png?raw=true)
 ```java
 // intensity between -1.0 and 1.0
 PImage processedImage = Shadows.apply(image, intensity); 
@@ -209,7 +217,7 @@ PImage processedImage = Sharpen.apply(image, sharpIntensity);  // sharpIntensity
 ```
 
 #### Color shift image
-![alt sharpen](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/colorshift.png?raw=true)
+![alt color shift](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/colorshift.png?raw=true)
 ```java
 // hue is a value between 0 and 360
 // offset is the color range which is accepted (in hue range)
@@ -229,13 +237,13 @@ PImage processedImage = LUT.apply(image, style);
 ```
 
 #### Glitch image
-![alt lookup-table](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/glitch.png?raw=true)
+![alt glitch-effect](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/glitch.png?raw=true)
 ```java
 PImage processedImage = Glitch.apply(image, intensity, scanlineheight);
 ```
 
 #### Strokes image
-![alt lookup-table](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/strokes.png?raw=true)
+![alt strokes](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/strokes.png?raw=true)
 ```java
 // gridSize 
 // lineLength 
@@ -272,7 +280,7 @@ PImage processedImage = Halftone.apply(image, dotsize, foreground, background, s
 ```
 
 #### Toning image
-![alt halftone](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/toning.png?raw=true)
+![alt toning](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/toning.png?raw=true)
 ```java
 // tone is a color and intensity is a value between 0.0 and 1.0
 color tone = color(255, 11, 120);
@@ -281,7 +289,7 @@ PImage processedImage = Toning.apply(image, tone, intensity);
 ```
 
 #### Split toning image
-![alt halftone](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/splittoning.png?raw=true)
+![alt split-toning](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/splittoning.png?raw=true)
 ```java
 PImage processedImage = SplitToning.apply(
       image,
