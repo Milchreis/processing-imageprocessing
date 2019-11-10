@@ -133,7 +133,18 @@ public class Tools {
 		h = PApplet.map(h, 0f, 360f, 0, 1f);
 		return Color.HSBtoRGB(h, s, b);
 	}
-	
+
+	public static float[] rgbToCmyk(int rgb) {
+		int[] rgbArr = getRGB(rgb);
+		float k = 1 - (Math.max(rgbArr[0], Math.max(rgbArr[1], rgbArr[2]))/255.0f);
+		return new float[] {
+				(1 - (rgbArr[0] / 255.0f) - k) / (1 - k),
+				(1 - (rgbArr[1] / 255.0f) - k) / (1 - k),
+				(1 - (rgbArr[2] / 255.0f) - k) / (1 - k),
+				k
+		};
+	}
+
 	public static boolean in(int x, int start, int end) {
 		return in((float)x, start, end);
 	}
