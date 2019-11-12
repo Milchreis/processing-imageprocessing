@@ -44,6 +44,7 @@ The following algorithms are supported in this library. Click on the link to see
  - [Looks](#looks)
    - [Lookup table (LUT)](#lookup-table-image)
    - [Glitch-Effect](#glitch-image)
+   - [Matte-Effect](#matte-effect)
    - [Strokes](#strokes-image)
    - [Dithering](#dithering)
    - [Halftone](#halftone-image)
@@ -240,6 +241,15 @@ PImage processedImage = LUT.apply(image, style);
 ![alt glitch-effect](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/glitch.png?raw=true)
 ```java
 PImage processedImage = Glitch.apply(image, intensity, scanlineheight);
+```
+
+#### Matte effect
+![alt matte-effect](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/matte.png?raw=true)
+```java
+PImage processedImage = Matte.apply(image, 
+    matteIntensity,         // intensity for the lifting blacks between 0 and 255
+    contrastIntensity,      // intensity for the constrast between 0 and 255
+    saturationIntensity);   // change for the saturation between -0.5 and 0.5
 ```
 
 #### Strokes image
