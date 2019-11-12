@@ -18,8 +18,8 @@ public class Toning {
         PImage output = Tools.createBlankImageLike(image);
         int[] tone = Tools.getRGB(color);
 
-        for (int y = 0; y < image.width; y++) {
-            for (int x = 0; x < image.height; x++) {
+        for (int y = 0; y < image.height; y++) {
+            for (int x = 0; x < image.width; x++) {
 
                 int[] rgb = Tools.getRGB(image.get(x, y));
                 tonePixel(rgb, tone, intensity);

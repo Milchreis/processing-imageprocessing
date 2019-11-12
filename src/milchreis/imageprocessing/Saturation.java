@@ -17,8 +17,8 @@ public class Saturation {
 
         PImage out = image.copy();
 
-        for (int y = 0; y < image.width; y++) {
-            for (int x = 0; x < image.height; x++) {
+        for (int y = 0; y < image.height; y++) {
+            for (int x = 0; x < image.width; x++) {
 
                 int rgb = image.get(x, y);
                 float[] hsb = Tools.rgbToHsb(rgb);

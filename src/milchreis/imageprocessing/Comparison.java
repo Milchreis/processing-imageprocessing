@@ -14,8 +14,8 @@ public class Comparison {
 
         long diff = 0L;
 
-        for (int y = 0; y < img1.width; y++) {
-            for (int x = 0; x < img1.height; x++) {
+        for (int y = 0; y < img1.height; y++) {
+            for (int x = 0; x < img1.width; x++) {
 
                 int[] rgb1 = Tools.getRGB(img1.get(x, y));
                 int[] rgb2 = Tools.getRGB(img2.get(x, y));
@@ -39,8 +39,8 @@ public class Comparison {
 
         PImage output = Tools.createBlankImageLike(img1);
 
-        for (int y = 0; y < img1.width; y++) {
-            for (int x = 0; x < img1.height; x++) {
+        for (int y = 0; y < img1.height; y++) {
+            for (int x = 0; x < img1.width; x++) {
 
                 int[] rgb1 = Tools.getRGB(img1.get(x, y));
                 int[] rgb2 = Tools.getRGB(img2.get(x, y));

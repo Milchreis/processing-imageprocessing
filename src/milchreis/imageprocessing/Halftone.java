@@ -47,8 +47,8 @@ public class Halftone {
 		
 		int xOffset = 0;
 		
-		for (int y = 0; y < canvas.width; y += dotsize + spacing) {
-			for (int x = xOffset; x < canvas.height; x += dotsize + spacing) {
+		for (int y = 0; y < canvas.height; y += dotsize + spacing) {
+			for (int x = xOffset; x < canvas.width; x += dotsize + spacing) {
 
 				int color = image.get(x+dotsize/2, y+dotsize/2);
 

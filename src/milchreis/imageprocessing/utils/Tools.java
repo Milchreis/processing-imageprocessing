@@ -102,10 +102,13 @@ public class Tools {
 	 * @return
 	 */
 	public static float[] rgbToHsb(int rgb) {
-		int[] arrRGB = getRGB(rgb);
-		return rgbToHsb(arrRGB[0], arrRGB[1], arrRGB[2]);
+		return rgbToHsb(getRGB(rgb));
 	}
-	
+
+	public static float[] rgbToHsb(int[] rgb) {
+		return rgbToHsb(rgb[0], rgb[1], rgb[2]);
+	}
+
 	/**
 	 * Returns an array for hue, saturation and brightness
 	 * in range:
