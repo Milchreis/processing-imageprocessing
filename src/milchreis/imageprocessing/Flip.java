@@ -17,8 +17,8 @@ public class Flip {
 				
 				int color = image.get(x, y);
 				
-				int newx = horizonal ? image.width - x : x;
-				int newy = vertical ? image.height - y : y;
+				int newx = horizonal ? (image.width - x) - 1 : x;
+				int newy = vertical ?( image.height - y ) - 1: y;
 				
 				output.set(newx, newy, color);
 			}
