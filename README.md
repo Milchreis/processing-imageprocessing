@@ -23,6 +23,7 @@ The following algorithms are supported in this library. Click on the link to see
    - [Erosion](#erosion-image)
    - [Vignette](#vignette-image)
    - [Quantization](#quantization)
+   - [PaletteMapping](#palettemapping)
    - [Difference](#difference)
  - [Blur](#blur)
    - [Gaussian](#gaussian-blur-image)
@@ -43,6 +44,7 @@ The following algorithms are supported in this library. Click on the link to see
    - [Color-Shift](#color-shift-image)
  - [Looks](#looks)
    - [Lookup table (LUT)](#lookup-table-image)
+   - [RetroConsole effect (Gameboy)](#retroconsole-effect-gameboy)
    - [Glitch-Effect](#glitch-image)
    - [Matte-Effect](#matte-effect)
    - [Strokes](#strokes-image)
@@ -111,6 +113,12 @@ PImage processedImage = Vignette.apply(image, intensity, vignetteWidth);
 ![alt quantization](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/quantization.png?raw=true)
 ```java
 PImage processedImage = Quantization.apply(image, shades);  // shades is a positive number between 1 and 255
+```
+
+#### PaletteMapping
+![alt quantization](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/palettemapping.png?raw=true)
+```java
+PImage processedImage = PaletteMapping.apply(image, color1, color2, color3);  // Add any number of colors from dark to light
 ```
 
 #### Difference
@@ -235,6 +243,12 @@ PImage processedImage = ColorShift.applyBrightness(image, hue, offset, shift);
 ```java
 LUT style = LUT.loadLut(LUT.STYLE.CONTRAST);
 PImage processedImage = LUT.apply(image, style); 
+```
+
+#### RetroConsole effect (Gameboy)
+![alt lookup-table](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/retroconsole.png?raw=true)
+```java
+PImage processedImage = RetroConsole.applyGameboy(image, pixelSize); 
 ```
 
 #### Glitch image
