@@ -5,6 +5,8 @@ import processing.core.PConstants;
 import processing.core.PGraphics;
 import processing.core.PImage;
 
+import static milchreis.imageprocessing.utils.Tools.copyImage;
+
 /**
  * A simple implementation of a vignette effect
  *
@@ -43,7 +45,7 @@ public class Vignette {
 	public static PImage apply(PImage image, PImage mask, float intensity) {
 
 		PGraphics output = image.parent.createGraphics(image.width, image.height);
-		PImage copy = image.copy();
+		PImage copy = copyImage(image);
 		copy.blend(mask, 0, 0, image.width, image.height, 0, 0, image.width, image.height, PImage.MULTIPLY);
 		
 		output.beginDraw();

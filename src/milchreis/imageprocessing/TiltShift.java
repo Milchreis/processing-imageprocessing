@@ -5,6 +5,8 @@ import processing.core.PConstants;
 import processing.core.PGraphics;
 import processing.core.PImage;
 
+import static milchreis.imageprocessing.utils.Tools.copyImage;
+
 /**
  * 
  * @author milchreis
@@ -13,9 +15,9 @@ public class TiltShift {
 
 	public static PImage createMask(PImage image, int blurIntensity, boolean horizontal, int position, int width) {
 		
-		PGraphics mask = image.parent.createGraphics(image.width, image.height);
 		PApplet main = image.parent;
-		
+		PGraphics mask = main.createGraphics(image.width, image.height);
+
 		int c1 = 255;
 		int c2 = 0;
 		
@@ -57,7 +59,7 @@ public class TiltShift {
     	PImage mask = createMask(image, blurIntensity, horizontal, position, width);
     	
     	// Apply mask
-    	PImage sharp = image.copy();
+    	PImage sharp = copyImage(image);
     	sharp.mask(mask);
     	
     	PGraphics output = image.parent.createGraphics(image.width, image.height);

@@ -3,6 +3,8 @@ package milchreis.imageprocessing;
 import processing.core.PConstants;
 import processing.core.PImage;
 
+import static milchreis.imageprocessing.utils.Tools.copyImage;
+
 /**
  * A simple implementation of a bloom like shader effect.
  * 
@@ -47,8 +49,8 @@ public class Bloom {
 		if(glow > 8)
 			glow = 8;
 		
-		PImage output = image.copy();
-		
+		PImage output = copyImage(image);
+
 		// Blur the image
 		PImage blurred = output.copy();
 		blurred.filter(PConstants.BLUR, glow);

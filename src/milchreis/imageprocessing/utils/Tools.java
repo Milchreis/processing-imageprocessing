@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import processing.core.PApplet;
+import processing.core.PGraphics;
 import processing.core.PImage;
 
 /**
@@ -188,6 +189,14 @@ public class Tools {
 		int g = (color & 0x0000FF00) >> 8;
 		int b = (color & 0x000000FF);
 		return (r + b + g) / 3;
+	}
+
+	public static PImage copyImage(PImage image) {
+		PGraphics output = image.parent.createGraphics(image.width, image.height);
+		output.beginDraw();
+		output.image(image, 0, 0);
+		output.endDraw();
+		return output;
 	}
 
 }
