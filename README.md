@@ -47,6 +47,7 @@ The following algorithms are supported in this library. Click on the link to see
    - [RetroConsole effect (Gameboy)](#retroconsole-effect-gameboy)
    - [Glitch-Effect](#glitch-image)
    - [Matte-Effect](#matte-effect)
+   - [Sabattier-Effect](#sabattier-effect)
    - [Strokes](#strokes-image)
    - [Dithering](#dithering)
    - [Halftone](#halftone-image)
@@ -264,6 +265,16 @@ PImage processedImage = Matte.apply(image,
     matteIntensity,         // intensity for the lifting blacks between 0 and 255
     contrastIntensity,      // intensity for the constrast between 0 and 255
     saturationIntensity);   // change for the saturation between -0.5 and 0.5
+```
+
+#### Sabattier effect
+![alt sabattier-effect](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/sabattier.png?raw=true)
+```java
+// intensity between 0.0 and 1.0
+PImage processedImage = Sabattier.apply(image, intensity);
+PImage processedImage = Sabattier.applyRed(image, intensity);
+PImage processedImage = Sabattier.applyGreen(image, intensity);
+PImage processedImage = Sabattier.applyBlue(image, intensity);
 ```
 
 #### Strokes image
