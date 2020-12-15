@@ -53,6 +53,7 @@ The following algorithms are supported in this library. Click on the link to see
    - [Halftone](#halftone-image)
    - [Toning](#toning-image)
    - [Split-Toning](#split-toning-image)
+   - [Sine-Wave](#sine-wave-image)
    - [ASCII](#ascii-image)
  - [Miscellaneous](#miscellaneous)
    - [Stacked images](#stacked-images)
@@ -330,6 +331,12 @@ PImage processedImage = SplitToning.apply(
       intensityHighlights,  // intensity for the toning in highlights between 0.0 and 1.0
       shadowTone,           // Color for the shadows (f.e. color shadowTone = color(124, 32, 201);
       intensityShadows);    // intensity for the toning in the shadows between 0.0 and 1.0
+```
+
+#### Sine-Wave image
+![alt sine-wave](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/sinewave.png?raw=true)
+```java
+PImage processedImage = SineWave.apply(image, rowHeight, weight, backgroundColor, wavesColor);
 ```
 
 #### ASCII image
