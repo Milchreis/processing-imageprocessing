@@ -5,7 +5,7 @@ import processing.core.PGraphics;
 import processing.core.PImage;
 
 /**
- * Special thanks goes to Joseph:
+ * Special thanks goes to Joseph HENRY:
  * https://discourse.processing.org/t/image-to-sine-waves/25938/2
  */
 public class SineWave {
