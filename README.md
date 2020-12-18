@@ -281,7 +281,10 @@ PImage processedImage = Sabattier.applyBlue(image, intensity);
 ```
 
 #### Strokes image
-![alt strokes](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/strokes.png?raw=true)
+random angles           |  fixed angles
+:-------------------------:|:-------------------------:
+![alt strokes](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/strokes.png?raw=true)  | ![alt strokes](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/strokes2.png?raw=true)
+
 ```java
 PImage processedImage = Strokes.apply(image, gridSize, lineLength);
 PImage processedImage = Strokes.apply(image, 
@@ -290,6 +293,7 @@ PImage processedImage = Strokes.apply(image,
     lineWeight,         // is positive and the weight of each line in pixel
     linesPerGrid,       // the number of lines per grid
     lineIntensity,      // alpha value for each line between 0 and 255
+    degree,             // if set the rotation is fixed in degree, otherwise random
     inColor,            // true for colors else black and white
     backgroundColor);   // color for the background
 ```
@@ -344,7 +348,7 @@ PImage processedImage = SineWave.apply(image, rowHeight, weight, backgroundColor
 #### Knitting image
 ![alt knitting](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/knitting.png?raw=true)
 ```java
-// keeps the colors
+// keeps the original colors
 PImage processedImage = Knitting.apply(image, size);
 // Sets foreground and background color and uses a threshold
 PImage processedImage = Knitting.apply(image, size, threshold, 240, #EE0000); 
