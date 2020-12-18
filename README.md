@@ -393,5 +393,5 @@ publishing basic algorithms. Also thank you very much Tom Gibara for your great 
 the [canny edge detector](http://www.tomgibara.com/computer-vision/canny-edge-detector).
 
 Moreover I thank you [Joseph HENRY](https://discourse.processing.org/u/josephh/summary) for the Sine-Wave-effect code and 
-@uheinema for the Sabattier code in the [Processing Discourse](https://discourse.processing.org/).
+[uheinema](https://github.com/uheinema) for the Sabattier code in the [Processing Discourse](https://discourse.processing.org/).
 
