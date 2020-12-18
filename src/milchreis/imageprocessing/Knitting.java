@@ -1,5 +1,6 @@
 package milchreis.imageprocessing;
 
+import milchreis.imageprocessing.utils.Tools;
 import processing.core.PGraphics;
 import processing.core.PImage;
 
@@ -46,7 +47,7 @@ public class Knitting {
             for (int y = 0; y < canvas.height; y += size + gap) {
 
                 int color = image.get(x + size / 2, y + size / 2);
-                float sum = getGray(color);
+                float sum = Tools.getGrey(color) / 255.0f;
 
                 if (inColor) {
                     canvas.stroke(color);
@@ -65,14 +66,6 @@ public class Knitting {
 
         canvas.endDraw();
         return canvas.get();
-    }
-
-    private static float getGray(int color) {
-        return (
-                0.2125f * (color >> 16 & 0xff)
-                        + 0.7154f * (color >> 8 & 0xff)
-                        + 0.0721f * (color & 0xff)
-        ) / 255.0f;
     }
 
 }
