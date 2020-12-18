@@ -281,7 +281,7 @@ PImage processedImage = Sabattier.applyBlue(image, intensity);
 ```
 
 #### Strokes image
-random angles           |  fixed angles
+random angles           |  fixed angle
 :-------------------------:|:-------------------------:
 ![alt strokes](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/strokes.png?raw=true)  | ![alt strokes](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/strokes2.png?raw=true)
 
