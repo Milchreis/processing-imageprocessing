@@ -55,6 +55,7 @@ The following algorithms are supported in this library. Click on the link to see
    - [Toning](#toning-image)
    - [Split-Toning](#split-toning-image)
    - [Sine-Wave](#sine-wave-image)
+   - [Knitting](#knitting-image)
    - [ASCII](#ascii-image)
  - [Miscellaneous](#miscellaneous)
    - [Stacked images](#stacked-images)
@@ -338,6 +339,15 @@ PImage processedImage = SplitToning.apply(
 ![alt sine-wave](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/sinewave.png?raw=true)
 ```java
 PImage processedImage = SineWave.apply(image, rowHeight, weight, backgroundColor, wavesColor);
+```
+
+#### Knitting image
+![alt knitting](https://github.com/Milchreis/processing-imageprocessing/blob/master/img/knitting.png?raw=true)
+```java
+// keeps the colors
+PImage processedImage = Knitting.apply(image, size);
+// Sets foreground and background color and uses a threshold
+PImage processedImage = Knitting.apply(image, size, threshold, 240, #EE0000); 
 ```
 
 #### ASCII image
