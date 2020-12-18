@@ -1,5 +1,8 @@
 # Image processing for Processing
-This library collects various image processing algorithms and provides a simple access to them. All algorithms are implemented in Java and runs without any other dependencies. If you need high power performance better use [opencv for processing](https://github.com/atduskgreg/opencv-processing).
+This library collects various image processing algorithms and provides simple access to them. All algorithms are implemented 
+in Java and runs without any other dependencies. Some algorithms are pretty standard and others maybe do you know from Photoshop.
+It starts with less basic features and grow over the last years.
+If you need high power performance better use [opencv for processing](https://github.com/atduskgreg/opencv-processing).
 
 If you like this project and you want to keep me awake 🤪
 
@@ -64,7 +67,7 @@ The following algorithms are supported in this library. Click on the link to see
 #### Original image
 ![alt original](https://github.com/Milchreis/processing-imageprocessing/blob/master/examples/Basics/data/example.jpg?raw=true)
 
-_Photo is taken by me [more here](https://www.instagram.com/milchreisjunkie/)_
+_Photo taken by me [more here](https://www.instagram.com/milchreisjunkie/)_
 
 ## Basics
 
@@ -385,4 +388,10 @@ PImage processedImage = Blend.apply(image1, image2, intensity);
 ```
 
 # Special thanks
-My special thanks goes to [avatarr](https://github.com/avatarr/java-image-processing-algorithm) for implementing and publishing basic algorithms. Also thank you very much Tom Gibara for your great blog post and the implementation of the [canny edge detector](http://www.tomgibara.com/computer-vision/canny-edge-detector).
+My special thanks goes to [avatarr](https://github.com/avatarr/java-image-processing-algorithm) for implementing and 
+publishing basic algorithms. Also thank you very much Tom Gibara for your great blog post and the implementation of 
+the [canny edge detector](http://www.tomgibara.com/computer-vision/canny-edge-detector).
+
+Moreover I thank you [Joseph HENRY](https://discourse.processing.org/u/josephh/summary) for the Sine-Wave-effect code and 
+@uheinema for the Sabattier code in the [Processing Discourse](https://discourse.processing.org/).
+
